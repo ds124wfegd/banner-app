@@ -191,12 +191,159 @@ URL: localhost:8000/api_admin/bannerAdmin
 ```
 URL: localhost:8000/api_admin/bannerAdmin/getAll/banner
 ```
-![Снимок экрана (14684)](https://github.com/ds124wfegd/banner-app/assets/133537346/6cf24455-e90e-4e84-9f97-7f4d6092af68)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/a8ce86a9-c0fa-4b35-9a4d-fce97c5c1898)
+
 
 входные данные:
 ```
 {
+}
+```
+выходные:
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "isActive": 1,
+            "featureId": 2,
+            "tagId_1": 1,
+            "tagId_2": 2,
+            "tagId_3": 5
+        },
+        {
+            "id": 2,
+            "isActive": 2,
+            "featureId": 4,
+            "tagId_1": 5,
+            "tagId_2": 1,
+            "tagId_3": 5
+        },
+        {
+            "id": 3,
+            "isActive": 1,
+            "featureId": 3,
+            "tagId_1": 2,
+            "tagId_2": 1,
+            "tagId_3": 2
+        },
+        {
+            "id": 4,
+            "isActive": 2,
+            "featureId": 3,
+            "tagId_1": 2,
+            "tagId_2": 4,
+            "tagId_3": 2
+        },
+        {
+            "id": 5,
+            "isActive": 1,
+            "featureId": 5,
+            "tagId_1": 8,
+            "tagId_2": 7,
+            "tagId_3": 2
+        }
+    ]
+}
+```
+### Получение банеров по id фичи админом или пользователем
+```
+URL: localhost:8000/api/banner/user_banner/feature=5
+```
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/8db123ca-df10-4e35-a45f-a92a5c748a90)
+входные данные:
+```
+{
+}
+```
+выходные:
+```
+{
+    "data": [
+        {
+            "id": 5,
+            "isActive": 1,
+            "featureId": 5,
+            "tagId_1": 8,
+            "tagId_2": 7,
+            "tagId_3": 2
+        }
+    ]
+}
+```
 
+### Получение банеров по id тега админом или пользователем
+```
+URL: localhost:8000/api/banner/user_banner/tag=1
+```
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/ce2dbf18-cf0b-44e6-b0c0-6a55ff4a8328)
+
+входные данные:
+```
+{
+}
+```
+выходные:
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "isActive": 1,
+            "featureId": 2,
+            "tagId_1": 1,
+            "tagId_2": 2,
+            "tagId_3": 5
+        },
+        {
+            "id": 2,
+            "isActive": 2,
+            "featureId": 4,
+            "tagId_1": 5,
+            "tagId_2": 1,
+            "tagId_3": 5
+        },
+        {
+            "id": 3,
+            "isActive": 1,
+            "featureId": 3,
+            "tagId_1": 2,
+            "tagId_2": 1,
+            "tagId_3": 2
+        }
+    ]
+}
+```
+### Удаление банера по id фичи админом
+```
+URL: localhost:8000/api_admin/bannerAdmin/deleteByFeature/4
+```
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/48f693b1-418e-4eb4-9125-e98d566b28f4)
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/9801cb37-08fe-4b00-83bf-f19fb40b826b)
+входные данные:
+```
+{
+}
+```
+выходные:
+```
+{
+    "status": "ok"
+}
+```
+
+### обновление тегов, фич, статуса работы банера админом
+```
+URL: localhost:8000/api_admin/bannerAdmin/updateBanner/5
+```
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/9842315b-d294-4b98-ba3e-6891d100ddfd)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/d64b34c1-5dd9-48c6-927c-11fad2fb8335)
+входные данные:
+```
+{
 }
 ```
 выходные:
@@ -204,16 +351,6 @@ URL: localhost:8000/api_admin/bannerAdmin/getAll/banner
 {
 }
 ```
-### Получение банеров по id фичи админом или пользователем
-![Снимок экрана (14686)](https://github.com/ds124wfegd/banner-app/assets/133537346/bacbc9d1-4755-4722-8c2f-b7799200b556)
-### Получение банеров по id тега админом или пользователем
-
-![Снимок экрана (14687)](https://github.com/ds124wfegd/banner-app/assets/133537346/9eb367e3-b05e-4db5-a8fb-01c87a4a7b17)
-### Удаление банера по id фичи админом
-![Снимок экрана (14688)](https://github.com/ds124wfegd/banner-app/assets/133537346/117e19cc-b134-4dd8-a289-774ca5692329)
-![Снимок экрана (14689)](https://github.com/ds124wfegd/banner-app/assets/133537346/9891acb4-7740-45b6-9a4e-82a9c88367a7)
-### обновление тегов, фич, статуса работы банера админом
-![Снимок экрана (14691)](https://github.com/ds124wfegd/banner-app/assets/133537346/c1b515b4-23d5-42f1-b10a-15adecd09385)
 
 
 ## Вопросы:
