@@ -77,21 +77,92 @@ POST   |/api_admin/bannerAdmin/content/createContent=:id    | создание �
 GET    |/api_admin/bannerAdmin/content/getAllContnetById=:id  | получение содержимое контентов всех банеров 
 DELETE |/api_admin/bannerAdmin/content/deleteContnetById=:id  | удаление содержимого контентов банера по id контента
 
+
+## Usage
+
+###регистрация пользователя
+```
 URL: localhost:8000/auth/sign-up
+```
 
 ![image](https://github.com/ds124wfegd/banner-app/assets/133537346/111e6f54-cd50-4422-b1b9-c24fed2cc1e6)
 
 входные данные:
-
+```
 {
     "name": "Nicolay_2",
     "username": "Nicolas_2",
     "password": "12345"
 }
+```
 выходные:
+```
 "id": 6
+```
 
+###авторизация пользователя
+```
+URL: localhost:8000/auth/sign-in
+```
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/e0e4367a-6d07-46b1-92cc-ac24a570fefd)
 
+входные данные:
+```
+{
+    "username": "Nicolas_2",
+    "password": "12345"
+}
+```
+выходные:
+```
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMwNzM4OTUsImlhdCI6MTcxMzAzMDY5NSwidXNlcl9pZCI6Nn0.cIhKXB6nTFLlfZGt5z3cR6yQPu1aKbQmW0DoEcaT5zw"
+}
+```
+###регистрация админа
+```
+URL: localhost:8000/auth/sign-up-admin
+```
+![Снимок экрана (14680)](https://github.com/ds124wfegd/banner-app/assets/133537346/4fc6eb76-b968-4b74-80c7-0531ac58da33)
+входные данные:
+```
+{
+    "id":2000000002,
+    "adminUsername": "Vasiliy12345",
+    "adminPassword": "12345",
+    "adminStatus":true,
+    "systemPasword":"sekret"
+}
+```
+выходные:
+```
+{
+    "id": 2000000002
+}
+
+### авторизация админа
+```
+URL: localhost:8000/auth/sign-in-admin
+```
+![Снимок экрана (14680)](https://github.com/ds124wfegd/banner-app/assets/133537346/72d94ca4-c099-41fc-ae60-dfaf2556689d)
+входные данные:
+```
+{
+    "adminUsername": "Vasiliy12345",
+    "adminPassword": "12345"
+}
+```
+выходные:
+```
+{
+    "tokenAdmin": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMwNzQ1NTEsImlhdCI6MTcxMzAzMTM1MSwidXNlcl9pZCI6MjAwMDAwMDAwMn0.vc9vbxp2oPEzaihV-J1Y1R177_2us2lm7DAstW-0_6g"
+}
+
+---
+### Пример того, что пользователь не имеет доступа к другим эндпоинтам, кроме получения банеров
+![Снимок экрана (14678)](https://github.com/ds124wfegd/banner-app/assets/133537346/4476bd55-daad-457f-b3b2-b4fded80e9be)
+
+---
 ## Вопросы:
 1. Есть ли необходимость реализовывать эндпоитны для регистрации и авторизации?
 - Если рассматривать то, что разрабатывается микросервис, в этом необходимости нет, необходимо предоставить интерфейсы для сервисов регистрации и авторизации. Однако для данного задания принято решение реализовать данные методы.
