@@ -80,7 +80,7 @@ DELETE |/api_admin/bannerAdmin/content/deleteContnetById=:id  | удаление
 
 ## Usage
 
-###регистрация пользователя
+### регистрация пользователя
 ```
 URL: localhost:8000/auth/sign-up
 ```
@@ -100,7 +100,7 @@ URL: localhost:8000/auth/sign-up
 "id": 6
 ```
 
-###авторизация пользователя
+### авторизация пользователя
 ```
 URL: localhost:8000/auth/sign-in
 ```
@@ -119,7 +119,7 @@ URL: localhost:8000/auth/sign-in
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMwNzM4OTUsImlhdCI6MTcxMzAzMDY5NSwidXNlcl9pZCI6Nn0.cIhKXB6nTFLlfZGt5z3cR6yQPu1aKbQmW0DoEcaT5zw"
 }
 ```
-###регистрация админа
+### регистрация админа
 ```
 URL: localhost:8000/auth/sign-up-admin
 ```
@@ -139,12 +139,14 @@ URL: localhost:8000/auth/sign-up-admin
 {
     "id": 2000000002
 }
+```
 
 ### авторизация админа
 ```
 URL: localhost:8000/auth/sign-in-admin
 ```
-![Снимок экрана (14680)](https://github.com/ds124wfegd/banner-app/assets/133537346/72d94ca4-c099-41fc-ae60-dfaf2556689d)
+![Снимок экрана (14681)](https://github.com/ds124wfegd/banner-app/assets/133537346/deb44a88-9139-4e0d-91fe-7aec0cf5ead6)
+
 входные данные:
 ```
 {
@@ -157,12 +159,40 @@ URL: localhost:8000/auth/sign-in-admin
 {
     "tokenAdmin": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMwNzQ1NTEsImlhdCI6MTcxMzAzMTM1MSwidXNlcl9pZCI6MjAwMDAwMDAwMn0.vc9vbxp2oPEzaihV-J1Y1R177_2us2lm7DAstW-0_6g"
 }
-
+```
 ---
 ### Пример того, что пользователь не имеет доступа к другим эндпоинтам, кроме получения банеров
 ![Снимок экрана (14678)](https://github.com/ds124wfegd/banner-app/assets/133537346/4476bd55-daad-457f-b3b2-b4fded80e9be)
-
 ---
+### создание банера
+```
+URL: localhost:8000/api_admin/bannerAdmin
+```
+![Снимок экрана (14682)](https://github.com/ds124wfegd/banner-app/assets/133537346/72fdf977-9a81-4258-853f-2d64a8ea2efe)
+
+![Снимок экрана (14683)](https://github.com/ds124wfegd/banner-app/assets/133537346/a5d9234a-49c3-496b-a352-e6d701a9fc43)
+входные данные:
+```
+{
+    "isActive": 1,
+    "featureId": 2,
+    "tagId_1":1,
+    "tagId_2":2,
+    "tagId_3": 5
+}
+```
+выходные:
+```
+{
+    "id": 5
+}
+```
+### создание банера
+```
+URL: localhost:8000/api_admin/bannerAdmin
+```
+
+
 ## Вопросы:
 1. Есть ли необходимость реализовывать эндпоитны для регистрации и авторизации?
 - Если рассматривать то, что разрабатывается микросервис, в этом необходимости нет, необходимо предоставить интерфейсы для сервисов регистрации и авторизации. Однако для данного задания принято решение реализовать данные методы.
