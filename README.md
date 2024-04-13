@@ -426,6 +426,15 @@ URL: localhost:8000/api_admin/bannerAdmin/content/deleteContnetById=2
 ![Снимок экрана (14714)](https://github.com/ds124wfegd/banner-app/assets/133537346/c46ee927-8b35-4794-9df5-04b679ee8c4e)
 
 
+Тестирование: /api/banner/user_banner/feature=3
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/b6866659-f963-44db-bd41-536028d44bf2)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/0267baa4-b6bf-49a1-b4bf-8bcab6fb0f0e)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/cc1c6a8f-a38b-4538-bd71-e7e2b31ac5f2)
+
+
+
+
+
 
 
 
