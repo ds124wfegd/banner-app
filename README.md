@@ -430,6 +430,56 @@ URL: localhost:8000/api_admin/bannerAdmin/content/deleteContnetById=2
 ![image](https://github.com/ds124wfegd/banner-app/assets/133537346/b6866659-f963-44db-bd41-536028d44bf2)
 ![image](https://github.com/ds124wfegd/banner-app/assets/133537346/0267baa4-b6bf-49a1-b4bf-8bcab6fb0f0e)
 ![image](https://github.com/ds124wfegd/banner-app/assets/133537346/cc1c6a8f-a38b-4538-bd71-e7e2b31ac5f2)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/6a819ed5-2487-4a9e-880b-96da0201de91)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/a26a7b57-5176-4bed-8eb1-f3631a6560fc)
+
+
+Тестирование localhost:8000/api_admin/bannerAdmin
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/7641a53a-cca7-49f4-ac64-17f05788150c)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/91c19f59-7eed-49d5-abbe-4b68c5c0182c)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/9bf68a45-0230-432f-8c62-6e58132c9c22)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/b353b735-77fa-4c2a-93e5-f5492d9b752a)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/96e350cf-efcf-465e-bc07-3d4218acdbf3)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/051eb817-9bff-45c6-ac3f-b4079424b049)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/587a4040-e055-4739-a415-e2379bb06311)
+
+Тестирование localhost:8000/api_admin/bannerAdmin/content/createContent=1
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/9fe67873-7cf6-43f5-8b3f-54675b52361f)
+
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/3b488b5a-7976-4bee-bb0a-623218e54f95)
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/c7e69718-d3a6-4208-9f48-2931fe45aa1f)
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/f5998160-edd0-4451-b98c-c98f15ce0d15)
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/5c108c84-ee57-4166-ba3e-8aa16c0add59)
+
+Тестирование: localhost:8000/api_admin/bannerAdmin/content/getAllContnetById=3
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/2b6b78d5-6a70-49ba-965f-a5039001dea4)
+
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/1db6a2b7-860f-40cb-ac5d-9e95e6f08b72)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/2af02bbb-c632-4076-b28b-2ce46dfb581d)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/2023c944-be3e-46ba-8ceb-81c1399c6977)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
