@@ -351,6 +351,69 @@ URL: localhost:8000/api_admin/bannerAdmin/updateBanner/5
 {
 }
 ```
+### Создание контента админом
+```
+URL: localhost:8000/api_admin/bannerAdmin/content/createContent=1
+```
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/beb26414-379a-40fd-bae2-d876a07e1564)
+входные данные:
+```
+{
+    "bannerId":22,
+	"title":"fdsf",
+	"someTitle":"fdgdvdgfvsdf",
+	"text":"fdfgds",
+	"someText":"fdddthts",
+	"someUrl":"fdf"
+}
+```
+выходные:
+```
+{
+    "id": 1
+}
+```
+### Получение контента по Id банера
+```
+URL: localhost:8000/api_admin/bannerAdmin/content/createContent=1
+```
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/6d4526e2-ce32-4a4c-9dfe-443ea236c563)
+входные данные:
+```
+{
+}
+```
+выходные:
+```
+[
+    {
+        "id": 2,
+        "bannerId": 1,
+        "title": "fddsfdsfsdfsdfsdfsf",
+        "someTitle": "fdgdfdsfdsvdgfvsdf",
+        "text": "fdfgds",
+        "someText": "sdfsdfdsfsd",
+        "someUrl": "fddfsfdsff"
+    }
+]
+```
+### удаление содержимого контентов банера по id контента
+```
+URL: localhost:8000/api_admin/bannerAdmin/content/deleteContnetById=2
+```
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/610a067d-ae0c-48ec-a71e-0a782d290f2f)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/d25c61eb-c9fc-46f4-a006-afa9e5708999)
+входные данные:
+```
+{
+}
+```
+выходные:
+```
+{
+    "status": "ok"
+}
+```
 
 
 ## Вопросы:
