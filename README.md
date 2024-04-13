@@ -418,6 +418,17 @@ URL: localhost:8000/api_admin/bannerAdmin/content/deleteContnetById=2
 }
 ```
 
+#Нагрузочное тестирование
+авторизация для админа
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/635aeb95-fe0a-46d4-a33e-d6f0ddebc057)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/d4a0371b-ffeb-4a3c-bb26-36ee6b929789)
+![image](https://github.com/ds124wfegd/banner-app/assets/133537346/78bd9659-2ef9-495a-a20a-db4891840e75)
+![Снимок экрана (14714)](https://github.com/ds124wfegd/banner-app/assets/133537346/c46ee927-8b35-4794-9df5-04b679ee8c4e)
+
+
+
+
+
 
 ## Вопросы:
 1. Есть ли необходимость реализовывать эндпоитны для регистрации и авторизации?
