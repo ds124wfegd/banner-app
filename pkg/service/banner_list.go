@@ -17,8 +17,8 @@ func (s *BannerListService) Create(list bannerapp.Banner) (int, error) {
 	return s.repo.Create(list)
 }
 
-func (s *BannerListService) GetAll() ([]bannerapp.Banner, error) {
-	return s.repo.GetAll()
+func (s *BannerListService) GetAll(adminId int) ([]bannerapp.Banner, error) {
+	return s.repo.GetAll(adminId)
 }
 
 func (s *BannerListService) GetByFeature(featureid int) ([]bannerapp.Banner, error) {

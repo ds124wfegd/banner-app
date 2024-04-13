@@ -46,7 +46,14 @@ type getAllBannersResponse struct {
 }
 
 func (h *Handler) getAllBanners(c *gin.Context) {
-	lists, err := h.services.BannerList.GetAll()
+
+	adminId, err := getAdminId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	lists, err := h.services.BannerList.GetAll(adminId)
 
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())

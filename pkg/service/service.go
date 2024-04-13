@@ -15,7 +15,7 @@ type Authorization interface {
 
 type BannerList interface {
 	Create(list bannerapp.Banner) (int, error)
-	GetAll() ([]bannerapp.Banner, error)
+	GetAll(adminId int) ([]bannerapp.Banner, error)
 	GetByFeature(featureid int) ([]bannerapp.Banner, error)
 	GetByTag(tagid int) ([]bannerapp.Banner, error)
 

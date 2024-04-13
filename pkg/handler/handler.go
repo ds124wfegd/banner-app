@@ -31,6 +31,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		{
 			banner.GET("/user_banner/feature=:id", h.getBannersByFeature)
 			banner.GET("/user_banner/tag=:id", h.getBannersByTag)
+			banner.GET("/user_banner/banner", h.getAllBanners)
 		}
 	}
 
@@ -38,16 +39,19 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	{
 		bannerAdmin := api_admin.Group("/bannerAdmin")
 		{
+			bannerAdmin.POST("/", h.createBanner)
 			bannerAdmin.GET("/admin_banner/feature=:id", h.getBannersByFeature)
 			bannerAdmin.GET("/admin_banner/tag=:id", h.getBannersByTag)
-			bannerAdmin.POST("/", h.createBanner)
-			bannerAdmin.POST("/createContent=:id", h.createContent)
 			bannerAdmin.GET("/getAll/banner", h.getAllBanners)
-			bannerAdmin.GET("/getAllContnetById=:id", h.getAllContent)
-			bannerAdmin.DELETE("/deleteContnetById=:id", h.deleteContentById)
 			bannerAdmin.GET("/updateBanner/:id", h.updateBanner)
 			bannerAdmin.DELETE("/deleteByFeature/:id", h.deleteBannerByFeature)
+
+			bannerAdmin.POST("content/createContent=:id", h.createContent)
+			bannerAdmin.GET("content/getAllContnetById=:id", h.getAllContent)
+			bannerAdmin.DELETE("content/deleteContnetById=:id", h.deleteContentById)
+
 		}
+
 	}
 	return router
 }

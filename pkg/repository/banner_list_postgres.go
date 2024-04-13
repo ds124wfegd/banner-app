@@ -31,25 +31,24 @@ func (r *BannerListPostgres) Create(list bannerapp.Banner) (int, error) {
 		tx.Rollback()
 		return 0, err
 	}
-
-	/*createContentBannerQuery := fmt.Sprintf("INSERT INTO %s (feature_id, banner_id) VALUES ($1, $2)", featureBannerTable)
-	_, err = tx.Exec(createContentBannerQuery, list.FeatureId, id)
-	if err != nil {
-		tx.Rollback()
-		return 0, err
-	}
-
-	}*/
-
 	return id, tx.Commit()
 }
 
-func (r *BannerListPostgres) GetAll() ([]bannerapp.Banner, error) {
+func (r *BannerListPostgres) GetAll(adminId int) ([]bannerapp.Banner, error) {
 	var lists []bannerapp.Banner
 
-	query := fmt.Sprintf(`SELECT banners.id, banners.is_active, banners.feature_id, banners.tag_id_1, banners.tag_id_2, banners.tag_id_3 FROM %s`, bannerTable)
-	err := r.db.Select(&lists, query)
-	return lists, err
+	if adminId > 2000000000 {
+
+		query := fmt.Sprintf(`SELECT banners.id, banners.is_active, banners.feature_id, banners.tag_id_1, banners.tag_id_2, banners.tag_id_3 FROM %s`, bannerTable)
+		err := r.db.Select(&lists, query)
+		return lists, err
+	} else {
+
+		query := fmt.Sprintf(`SELECT banners.id, banners.is_active, banners.feature_id, banners.tag_id_1, banners.tag_id_2, banners.tag_id_3 FROM %s WHERE banners.is_active = 1`, bannerTable)
+		err := r.db.Select(&lists, query)
+		return lists, err
+
+	}
 }
 
 func (r *BannerListPostgres) GetByFeature(featureid int) ([]bannerapp.Banner, error) {
@@ -66,20 +65,9 @@ func (r *BannerListPostgres) GetByTag(tagid int) ([]bannerapp.Banner, error) {
 
 	query := fmt.Sprintf("SELECT banners.id, banners.is_active, banners.feature_id, banners.tag_id_1, banners.tag_id_2, banners.tag_id_3 FROM %s WHERE (banners.tag_id_1 = $1 or  banners.tag_id_2 = $1 or  banners.tag_id_3 = $1)", bannerTable)
 	err := r.db.Select(&lists, query, tagid)
-
 	return lists, err
+
 }
-
-/*func (r *BannerListPostgres) GetById(userId, listId int) (mp.MpList, error) {
-	var list mp.MpList
-
-	query := fmt.Sprintf(`SELECT tl.id, tl.title, tl.description, tl.filepath, tl.price FROM %s tl
-								INNER JOIN %s ul on tl.id = ul.list_id WHERE ul.user_id = $1 AND ul.list_id = $2`,
-		mpListsTable, usersListsTable)
-	err := r.db.Get(&list, query, userId, listId)
-
-	return list, err
-}*/
 
 func (r *BannerListPostgres) DeleteByFeature(listId int) error {
 	query := fmt.Sprintf("DELETE FROM %s WHERE banners.feature_id =$1", bannerTable)

@@ -67,7 +67,7 @@ func (h *Handler) adminIdentity(c *gin.Context) {
 	c.Set(adminCtx, adminId)
 }
 
-func getUserId(c *gin.Context) (int, error) {
+/*func getUserId(c *gin.Context) (int, error) {
 	id, ok := c.Get(userCtx)
 	if !ok {
 		return 0, errors.New("user id not found")
@@ -79,7 +79,7 @@ func getUserId(c *gin.Context) (int, error) {
 	}
 
 	return idInt, nil
-}
+}*/
 
 func getAdminId(c *gin.Context) (int, error) {
 	id, ok := c.Get(adminCtx)
