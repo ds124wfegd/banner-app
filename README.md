@@ -32,7 +32,7 @@ github.com/gin-gonic/gin| высокопроизводительный веб-ф
 
 
 
-# Иструкция по запуску докер контейнера Postgres:
+## Иструкция по запуску докер контейнера Postgres:
 
 в CMD:
 
@@ -51,13 +51,35 @@ github.com/gin-gonic/gin| высокопроизводительный веб-ф
 * \password postgres (для сброса пароля)
 * дважды ввести новый пароль 12345
 
-Для запуска самого приложения:
+## Для запуска самого приложения:
 * go run cmd/main.go
 Для остановки:
 * Ctrl + C
 
 
-# Вопросы:
+## Описание эндпоинтов:
+метод/путь| назначение
+:---------|:----------
+POST   /auth/sign-up      | регистрация пользователя       
+POST   /auth/sign-in      | авторизация пользователя     
+POST   /auth/sign-up-admin| регистрация админа
+POST   /auth/sign-in-admin|авторизация админа   
+
+GET    /api/banner/user_banner/feature=:id |получение банера пользователем по id фичи
+GET    /api/banner/user_banner/tag=:id     |получение банера пользователем по id тега
+GET    /api/banner/user_banner/banner      |получение все банеров пользователем, которые включены
+
+POST   /api_admin/bannerAdmin/             | создание админом банера
+GET    /api_admin/bannerAdmin/admin_banner/feature=:id     | получение банера админом по id фичи
+GET    /api_admin/bannerAdmin/admin_banner/tag=:id     | получение банера админом по id тега
+GET    /api_admin/bannerAdmin/getAll/banner            |получение всех банеров админом
+GET    /api_admin/bannerAdmin/updateBanner/:id         | обновление тегов, фич, статуса работы банера админом
+DELETE /api_admin/bannerAdmin/deleteByFeature/:id      | удаление банера админом по id фичи
+POST   /api_admin/bannerAdmin/content/createContent=:id    | создание контента банера    
+GET    /api_admin/bannerAdmin/content/getAllContnetById=:id  | получение содержимое контентов всех банеров 
+DELETE /api_admin/bannerAdmin/content/deleteContnetById=:id  | удаление содержимого контентов банера по id контента
+
+## Вопросы:
 1. Есть ли необходимость реализовывать эндпоитны для регистрации и авторизации?
 - Если рассматривать то, что разрабатывается микросервис, в этом необходимости нет, необходимо предоставить интерфейсы для сервисов регистрации и авторизации. Однако для данного задания принято решение реализовать данные методы.
 2. 
